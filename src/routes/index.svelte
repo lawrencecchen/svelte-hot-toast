@@ -3,8 +3,8 @@
 </script>
 
 <script>
-	import Toaster from '$lib/Toast/Toaster.svelte';
-	import { toast } from '$lib/Toast/toast';
+	import Toaster from '$lib/_Toast/Toaster.svelte';
+	import { toast } from '$lib/_Toast/toast';
 </script>
 
 <svelte:head>
