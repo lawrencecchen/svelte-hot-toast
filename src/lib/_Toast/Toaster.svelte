@@ -6,7 +6,7 @@
 	import { toastEntries } from './toasts.store';
 </script>
 
-<div class="toaster fixed inset-4 pointer-events-none">
+<div class="toaster font-sans fixed inset-4 pointer-events-none">
 	<div class="absolute inset-0 flex flex-col items-center">
 		<div
 			class="flex-grow-0 flex flex-col items-center pointer-events-auto"
