@@ -4,7 +4,14 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
 	mode: 'jit',
 	purge: {
-		content: ['./src/**/*.{html,js,svelte,ts,md}']
+		content: [
+			'./src/**/*.html',
+			'./src/**/*.js',
+			'./src/**/*.ts',
+			'./src/**/*.svelte',
+			'./src/**/*.md'
+		]
+		// content: ['./src/**/*.{html,js,svelte,ts,md}']
 	},
 	darkMode: false, // or 'media' or 'class'
 	theme: {

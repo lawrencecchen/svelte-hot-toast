@@ -3,7 +3,8 @@
 </script>
 
 <script>
-	import Toaster, { toast } from 'svelte-hot-toast';
+	// import Toaster, { toast } from 'svelte-hot-toast';
+	import Toaster, { toast } from '../../package/index';
 
 	// import Toaster from '$lib/_Toast/Toaster.svelte';
 	// import { toast } from '$lib/_Toast/toast';
