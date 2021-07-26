@@ -1,6 +1,6 @@
 {
 	"name": "svelte-hot-toast",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -28,12 +28,12 @@
 		"prettier-plugin-svelte": "^2.2.0",
 		"svelte": "^3.34.0",
 		"svelte-check": "^2.0.0",
+		"svelte-hot-toast": "^0.0.2",
 		"svelte-preprocess": "^4.0.0",
 		"svelte2tsx": "^0.4.2",
 		"tailwindcss": "^2.2.7",
 		"tslib": "^2.0.0",
 		"typescript": "^4.3.5"
 	},
-	"type": "module",
-	"dependencies": {}
+	"type": "module"
 }

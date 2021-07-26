@@ -1,5 +1,5 @@
-import Toaster from '$lib/_Toast/Toaster.svelte';
-import { toast } from '$lib/_Toast/toast';
+import Toaster from './_Toast/Toaster.svelte';
+import { toast } from './_Toast/toast';
 
 export default Toaster;
 export { toast };
