@@ -1,19 +1,26 @@
 <script lang="ts">
-	import type { SvelteComponent } from 'svelte';
+	import { key } from './key';
+
+	import { getContext, SvelteComponent } from 'svelte';
 	import { quintIn, quintOut } from 'svelte/easing';
 
 	export let component: typeof SvelteComponent;
 	export let text: string;
 	export let style: string;
 
+	const { getPosition } = getContext(key);
+	const position = getPosition();
+	const multiplier = position.slice(0, 3) === 'top' ? 1 : -1;
+
 	function toastIn(node: HTMLDivElement, { duration = 325 }) {
 		return {
 			duration,
 			css: (t: number) => {
 				const eased = quintOut(t);
+				const y = (-200 + eased * 200) * multiplier;
 
 				return `
-          transform: translate3d(0,${-200 + eased * 200}%,-1px) scale(${0.5 + eased * 0.5});
+          transform: translate3d(0,${y}%,-1px) scale(${0.5 + eased * 0.5});
           opacity: ${0.5 + eased * 0.5};
         `;
 			}
@@ -25,9 +32,10 @@
 			duration,
 			css: (t: number) => {
 				const eased = quintIn(t);
+				const y = (-150 + eased * 150) * multiplier;
 
 				return `
-          transform: translate3d(0,${-150 + eased * 150}%,-1px) scale(${0.5 + eased * 0.5});
+          transform: translate3d(0,${y}%,-1px) scale(${0.5 + eased * 0.5});
           opacity: ${eased};
         `;
 			}
