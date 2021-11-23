@@ -10,9 +10,6 @@ const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
-		package: {
-			exports: (file) => file === 'index.js' || 'dist/svelte-hot-toast.css'
-		},
 		vite: {
 			resolve: {
 				alias: {
