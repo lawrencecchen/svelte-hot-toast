@@ -3,11 +3,10 @@
 </script>
 
 <script lang="ts">
-	import Toaster from '$lib/_Toast/Toaster.svelte';
-	import { toast } from '$lib/_Toast/toast';
 	import Listbox from '$lib/_components/Listbox/Listbox.svelte';
 	import ListboxOption from '$lib/_components/Listbox/ListboxOption.svelte';
 	import type { Position } from '$lib/_Toast/position';
+	import Toaster, { toast } from 'svelte-hot-toast';
 
 	let reversed = false;
 	let position: Position = 'top-center';

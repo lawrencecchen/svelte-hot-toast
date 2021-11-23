@@ -1,4 +1,5 @@
 import preprocess from 'svelte-preprocess';
+import path from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,7 +9,17 @@ const config = {
 
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+		target: '#svelte',
+		package: {
+			exports: (file) => file === 'index.js' || 'dist/svelte-hot-toast.css'
+		},
+		vite: {
+			resolve: {
+				alias: {
+					'svelte-hot-toast': path.resolve('src/lib')
+				}
+			}
+		}
 	}
 };
 
